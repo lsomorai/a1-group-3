@@ -9,6 +9,7 @@
 | Cory Wu               |   
 | Rick Zhang                |   
 
+[Link to the Defect Reports](document/group_3_PDF_bug_report.pdf)
 
 **Table of Contents**
 
@@ -113,13 +114,13 @@ Before this assignment, our group had experience of testing several school proje
 - Combined review of test results
 
 # Comparison of exploratory and manual functional testing
-We found that exploratory testing is more efficient at the beginning of the testing process. On the other hand, manual functional testing is more systematic and can find defects that exploratory testing missed. <br>
+We found that exploratory testing is more efficient at the beginning of the testing process. It works very well to catch major defects that keep the system from working. However, we had difficulty catching more detailed defects due to lose of tracking.<br>
 <br>
-Compare to exploratory testing, we only found 1 more defect in manual functional testing. That defect belongs to invalid PIN handling. The manual fucntional testing part has "first time input incorrect PIN" and "second time input incorrect PIN" as 2 test cases. <br>
+On the other hand, manual functional testing is more systematic and can find defects that exploratory testing missed. Compare to exploratory testing, we only found 1 more defect in manual functional testing. That defect belongs to invalid PIN handling. The manual fucntional testing part has "first time input incorrect PIN" and "second time input incorrect PIN" as 2 test cases, which is much more detailed.
 <br>
 
 
--   Link to the report
+[Link to the Defect Reports](document/group_3_PDF_bug_report.pdf)
 
 # Notes and discussion of the peer reviews of defect reports
 
