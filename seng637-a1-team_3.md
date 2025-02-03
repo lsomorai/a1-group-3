@@ -28,15 +28,15 @@
 [7. Comments/feedback on the lab and lab document itself](#commentsfeedback-on-the-lab-and-lab-document-itself)
 
 # Introduction
-Our group performed the following tasks in this assignment:
+In this assignment, our group carried out several key tasks to gain hands-on experience with both the testing process and professional bug-tracking tools. Our activities included:
 - Practiced pair testing
-- Conducted exploratory testing on the provided ATM simulation system version 1.0 and 1.1
+- Conducted exploratory testing on the provided ATM simulation system versions 1.0 and 1.1
 - Created effective defect reports
 - Tracked defects in JIRA
 - Executed manual test cases from a formal test suite
 - Performed regression testing to verify bug fixes
 
-Before this assignment, our group had experience of testing several school projects, and we now know what we did was mostly exploratory testing and manual functional testing. We haven't used professional bug tracking system or wrote detailed bug reports before.
+Before this assignment, our group had prior experience testing various school projects, most of which involved a combination of exploratory and manual functional testing. However, we now realize that our previous testing efforts lacked the structure of professional testing processes. In particular, we had never used a bug-tracking system like JIRA, nor had we written detailed bug reports that adhered to industry standards. This assignment has provided us with valuable insights into these professional practices, giving us the skills and experience needed to handle real-world testing scenarios.
 
 # High-level description of the exploratory testing plan
 
@@ -89,30 +89,35 @@ Before this assignment, our group had experience of testing several school proje
 ## Test Logistics
 
 ### Pair 1 (Warisa and Lucien):
-- Primary focus:
-  - Withdrawal operations
-  - Deposit functionality
-  - Receipt verification
-  - System startup/shutdown
+Primary focus:
+- Withdrawal operations
+- Deposit functionality
+- Receipt verification
+- System startup/shutdown
 
 ### Pair 2 (Cory and Rick):
-- Primary focus:
-  - Transfer operations
-  - Balance inquiries
-  - PIN validation
-  - Error handling scenarios
+Primary focus:
+- Transfer operations
+- Balance inquiries
+- PIN validation
+- Error handling scenarios
 
 ### Shared Responsibilities:
-- Both pairs will document findings in JIRA
+- Both pairs documented findings in JIRA
 - Cross-verification of critical bugs
 - Regular sync-ups to avoid duplicate testing
 - Combined review of test results
 
 # Comparison of exploratory and manual functional testing
-We found that exploratory testing is more efficient at the beginning of the testing process. It works very well to catch major defects that keep the system from working. However, we had difficulty catching more detailed defects due to lose of tracking.<br>
+We found that exploratory testing is highly efficient, particularly at the beginning of the testing process, as it allows testers to quickly dive into the system without predefined scripts and test cases. This method works well for uncovering major defects that prevent the system from functioning properly, such as crashes, system freezes, or critical errors that affect user interaction. Its unstructured nature gives testers the freedom to approach the system from various angles, enabling us to identify high-impact issues early on.<br>
 <br>
-On the other hand, manual functional testing is more systematic and can find defects that exploratory testing missed. Compare to exploratory testing, we only found 1 more defect in manual functional testing. That defect belongs to invalid PIN handling. The manual fucntional testing part has "first time input incorrect PIN" and "second time input incorrect PIN" as 2 test cases, which is much more detailed.
+However, one of the main challenges we faced during exploratory testing was the difficulty in tracking and documenting more detailed defects. Since exploratory testing lacks the structured format that test cases provide, it became harder to consistently record the exact steps, expected results, and other relevant details for each defect. This resulted in some defects being difficult to reproduce, making it hard to communicate the issues within our team.
 <br>
+<br>
+In contrast, manual functional testing provided a more systematic approach to defect identification. By using predefined test cases that cover specific functionalities, this approach allowed us to identify defects that exploratory testing might have missed. The structure of the test cases ensured that we were testing the system in a consistent and comprehensive way, with clearly defined inputs, actions, and expected outcomes.
+<br>
+<br>
+Although manual functional testing was more thorough, it revealed only one additional defect compared to exploratory testing. This defect was related to the handling of invalid PIN entries, which had been overlooked during exploratory testing. Specifically, the test cases for “first-time incorrect PIN input” and “second-time incorrect PIN input” provided more detailed coverage for this scenario, ensuring that edge cases like multiple incorrect PIN attempts were properly tested. These test cases were essential in revealing that the system was not handling invalid PIN inputs as expected, something that might have been missed in the exploratory testing process.
 
 
 [Link to the Defect Reports](document/group_3_PDF_bug_report.pdf)
@@ -120,40 +125,46 @@ On the other hand, manual functional testing is more systematic and can find def
 # Notes and discussion of the peer reviews of defect reports
 Discussion 1:
   - Defect: S6G-13 ET: Misspelling of the word "would"
-    - Question: Should misspellings be considered as defects?
-    - Conclusion: Yes, a customer would be confused by the misspelling.
+  - Question: Should misspellings be considered as defects?
+  - Conclusion: Yes, as a misspelling could confuse customers.
 
 Discussion 2:
-  - Defect: S6G-7 ET: $10 will be deducted from each deposit
-    - Question: Is the system designed to deduct $10 fee from each deposit?
-    - Conclusion: No, it's not mentioned in the requirement.
+  - Defect: S6G-7 ET: $10 is deducted from each deposit
+  - Question: Is the system designed to deduct a $10 fee from each deposit?
+  - Conclusion: No, this behavior is not mentioned in the requirements.
 
 Discussion 3:
-  - Defect: S6G-16 MFT: $0.10 will be deducted from each deposit
-    - Question: The deduction in S6G-7 changed from $10 to $0.10. Should we update S6G-7 or create a new defect?
-    - Conclusion: Create a new defect and mark S6G-7 as done.
+  - Defect: S6G-16 MFT: $0.10 is deducted from each deposit
+  - Question: The deduction in S6G-7 changed from $10 to $0.10. Should we update S6G-7 or create a new defect?
+  - Conclusion: Create a new defect and mark S6G-7 as resolved.
 
 Notes:
-- Appendix C Test Case 22 triggered a defect but it's already found during exploratory testing.
-- Appendix C Test Case 11, 37, 39, 40 can not be performed because the system does not allow attempt transaction after inputing incorrect PIN.
+- Appendix C Test Case 6, 22 triggered a defect but it's already found during exploratory testing.
+- Appendix C Test Case 11, 37, 39, 40 could not be executed because the system does not allow transactions after an incorrect PIN attempt.
 
 # How the pair testing was managed and team work/effort was divided
 
-Our group have 4 members, so we first split into 2 pairs. <br>
-Pair 1: Warisa and Lucien <br>
-Pair 2: Cory and Rick <br>
+Our group consisted of four members, so we split into two pairs: <br>
+- Pair 1: Warisa and Lucien <br>
+- Pair 2: Cory and Rick <br>
 
-During exploratory testing, Pair 1 and Pair 2 both spent about 30 minutes to test the system in their own way. Then we had a discussion to compare the results. We found 12 defects in this step. 10 were noticed by both pairs. <br>  
+To begin with, we engaged in exploratory testing. During this phase, both pairs worked independently for approximately 30 minutes, thoroughly exploring the system’s functionality and behavior. This allowed each pair to develop a perspective on how the system behaved under various conditions. After this testing session, the pairs reconvened and compared their findings. We identified a total of 12 defects during this review, 10 of which were common across both pairs. This reinforced the validity of our observations and gave us a clearer understanding of the defects that required attention. <br>  
 
-During manual functional testing, Pair 1 took care of test cases 1-20 and Pair 2 took care of test cases 21-40. We found 2 more defects in this step. We had many discussions about how to properly record the defects and defect classification. <br>
+During manual functional testing, we divided the test cases: <br>
+- Pair 1: Test cases 1-20 
+- Pair 2: Test cases 21-40. 
+
+Each pair was responsible for executing their assigned test cases while documenting the results carefully. This division of work allowed us to test a wide range of functionalities without duplicating efforts. During this phase, we identified two additional defects that were missed during exploratory testing, further refining our understanding of the system’s defects. <br>
 
 # Difficulties encountered, challenges overcome, and lessons learned
-- Sometime we lost track of steps to reproduce the defect.
-- Initially we didn't know how to properly use JIRA.
+During the course of the assignment, one of the primary difficulties we encountered was keeping track of the steps to reproduce defects. In the early stages, we faced challenges in documenting and retracing the exact conditions under which the defects occurred. This led to some confusion and delays in identifying the root causes. However, we learned the importance of maintaining clear, detailed, and consistent logs of test cases and defects. We implemented a systematic approach to record not only the defect but also the specific state and sequence of actions that triggered it. This practice significantly improved our ability to track and reproduce issues efficiently.<br>
+  
+Another challenge we faced was a lack of familiarity with JIRA, particularly in its initial setup and usage for managing tasks and bugs. At first, we struggled with navigating its interface and understanding how to organize issues effectively. This led to some inefficiency in task assignment and progress tracking. Over time, we overcame this challenge by dedicating time to learning the tool’s functionalities, seeking help from online resources, and exploring best practices for creating, updating, and categorizing issues. As a result, our workflow became much more streamlined, and we were able to use JIRA to its full potential for this assignment.
 
 # Comments/feedback on the lab and lab document itself
-The overall assignment is well designed. We now feel much more confident about the testing process and JIRA usage. <br>
-<br>
-While using JIRA, we are not sure if we should keep function being tested, steps to reproduce, and expected result all in the description field or creating new fields.<br>
-<br>
+The overall assignment was well-designed. It provided a structured approach to testing and gave us the opportunity to apply what we’ve learned in a real-world context. As a result, we now feel much more confident and capable when it comes to the testing process, especially in using tools like JIRA for task management and bug tracking. The hands-on nature of the assignment allowed us to see the importance of thorough documentation and organization in software testing, which we will carry forward into future projects and assignments. <br>
+
+However, while using JIRA, we encountered a bit of uncertainty regarding the best practices for structuring the information within the issues. Specifically, we were unsure whether it was better to include details like functions being tested, steps to reproduce, and expected results in the description field of the ticket, or if it would be more effective to create separate fields for each of these elements. This confusion led to some inconsistency in how we documented our tests initially. We would appreciate further clarification on how to organize this information in a way that would best serve the testing processes.<br>
+
+The assignment description itself was clear, well-structured, and easy to follow. It provided a solid overview of what was expected from the assignment and detailed instructions that helped guide us step by step. We appreciated how the lab was designed to progressively build our understanding of the testing workflow.
 
