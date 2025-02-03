@@ -44,11 +44,25 @@ Before this assignment, our group had experience of testing several school proje
 
 # High-level description of the exploratory testing plan
 
-Text…
+1. Start with main functions:
+  - Withdrawals
+  - Deposits
+  - Transfers
+  - Balance inquiries
+- Focus on amount correctness, transaction completion and receipt generation
 
+2. Test error handling:
+  - Invalid PIN
+  - Insufficient funds
+  - Negative amount
+- Focus on card detention and limit exceeded
+
+3. Other tests:
+  - Money Market Account
+  
 # Comparison of exploratory and manual functional testing
 
-Text…
+
 
 -   Link to the report
 
@@ -56,9 +70,15 @@ Text…
 
 Text…
 
-# How the pair testing was managed and team work/effort was divided 
+# How the pair testing was managed and team work/effort was divided
 
-Text…
+Our group have 4 members, so we first split into 2 pairs. <br>
+Pair 1: Warisa and Lucien <br>
+Pair 2: Cory and Rick <br>
+
+During exploratory testing, Pair 1 and Pair 2 both spent about 30 minutes to test the system in their own way. Then we had a discussion to compare the results. We found 12 defects in this step. 10 were noticed by both pairs. <br>  
+
+During manual functional testing, Pair 1 took care of test cases 1-20 and Pair 2 took care of test cases 21-40. We found 2 more defects in this step.<br>
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
