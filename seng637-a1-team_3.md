@@ -123,8 +123,24 @@ On the other hand, manual functional testing is more systematic and can find def
 [Link to the Defect Reports](document/group_3_PDF_bug_report.pdf)
 
 # Notes and discussion of the peer reviews of defect reports
+Discussion 1:
+  - Defect: S6G-13 ET: Misspelling of the word "would"
+    - Question: Should misspellings be considered as defects?
+    - Conclusion: Yes, a customer would be confused by the misspelling.
 
+Discussion 2:
+  - Defect: S6G-7 ET: $10 will be deducted from each deposit
+    - Question: Is the system designed to deduct $10 fee from each deposit?
+    - Conclusion: No, it's not mentioned in the requirement.
 
+Discussion 3:
+  - Defect: S6G-16 MFT: $0.10 will be deducted from each deposit
+    - Question: The deduction in S6G-7 changed from $10 to $0.10. Should we update S6G-7 or create a new defect?
+    - Conclusion: Create a new defect and mark S6G-7 as done.
+
+Notes:
+- Appendix C Test Case 22 triggered a defect but it's already found during exploratory testing.
+- Appendix C Test Case 11, 37, 39, 40 can not be performed because the system does not allow attempt transaction after inputing incorrect PIN.
 
 # How the pair testing was managed and team work/effort was divided
 
@@ -137,8 +153,8 @@ During exploratory testing, Pair 1 and Pair 2 both spent about 30 minutes to tes
 During manual functional testing, Pair 1 took care of test cases 1-20 and Pair 2 took care of test cases 21-40. We found 2 more defects in this step. We had many discussions about how to properly record the defects and defect classification. <br>
 
 # Difficulties encountered, challenges overcome, and lessons learned
-
-Text…
+- Sometime we lost track of steps to reproduce the defect.
+- Initially we didn't know how to properly use JIRA.
 
 # Comments/feedback on the lab and lab document itself
 The overall assignment is well designed. We now feel much more confident about the testing process and JIRA usage. <br>
