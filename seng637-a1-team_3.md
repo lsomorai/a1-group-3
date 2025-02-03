@@ -13,7 +13,7 @@
 **Table of Contents**
 
 (When you finish writing, update the following list using right click, then
-“Update Field”)
+"Update Field")
 
 [1 Introduction	1](#_Toc439194677)
 
@@ -44,27 +44,80 @@ Before this assignment, our group had experience of testing several school proje
 
 # High-level description of the exploratory testing plan
 
-1. Start with main functions:
-  - Withdrawals
-  - Deposits
-  - Transfers
+## Test Types
+1. Functional Testing
+   - Core transactions (withdrawals, deposits, transfers, inquiries)
+   - Receipt generation
+   - Card handling
+   - Envelope handling
+   - Cash handling
+
+2. Security Testing
+   - PIN validation
+   - Card retention rules
+   - Transaction limits
+
+3. Error Handling Testing
+   - Invalid inputs
+   - Insufficient funds
+   - Transaction cancellation
+
+## Scope of Testing
+
+### In Scope
+1. Main Functions:
+   - Withdrawals (checking, savings)
+   - Deposits (envelope handling, amount verification)
+   - Transfers between accounts
+   - Balance inquiries
+   - Receipt generation
+
+2. Error Scenarios:
+   - Invalid PIN handling
+   - Insufficient funds management
+   - Negative amount inputs
+   - Card detention cases
+   - Transaction limits
+
+3. Special Features:
+   - Money Market Account inquiry
+   - Multiple transactions
+   - System startup/shutdown
+
+### Out of Scope
+- Backend system
+- Hardware component testing
+- Network communication testing
+- Database persistence
+
+## Test Logistics
+
+### Pair 1 (Warisa and Lucien):
+- Primary focus:
+  - Withdrawal operations
+  - Deposit functionality
+  - Receipt verification
+  - System startup/shutdown
+
+### Pair 2 (Cory and Rick):
+- Primary focus:
+  - Transfer operations
   - Balance inquiries
-- Focus on amount correctness, transaction completion and receipt generation
+  - PIN validation
+  - Error handling scenarios
 
-2. Test error handling:
-  - Invalid PIN
-  - Insufficient funds
-  - Negative amount
-- Focus on card detention and limit exceeded
+### Shared Responsibilities:
+- Both pairs will document findings in JIRA
+- Cross-verification of critical bugs
+- Regular sync-ups to avoid duplicate testing
+- Combined review of test results
 
-3. Other tests:
-  - Money Market Account
-  
 # Comparison of exploratory and manual functional testing
-Compare to exploratory testing, we only found 1 more defect in manual functional testing. That defect belongs to invalid PIN handling. The manual fucntional testing part has "first time input incorrect PIN" and "second time input incorrect PIN" as 2 test cases. <br>
-<br>
 We found that exploratory testing is more efficient at the beginning of the testing process. On the other hand, manual functional testing is more systematic and can find defects that exploratory testing missed. <br>
 <br>
+Compare to exploratory testing, we only found 1 more defect in manual functional testing. That defect belongs to invalid PIN handling. The manual fucntional testing part has "first time input incorrect PIN" and "second time input incorrect PIN" as 2 test cases. <br>
+<br>
+
 
 -   Link to the report
 
